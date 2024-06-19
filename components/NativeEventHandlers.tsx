@@ -7,13 +7,39 @@ export default function NativeEventHandlers() {
   const appState = useRef(AppState.currentState);
   async function bioAuth() {
     isTemporaryBackground.current = true;
+    const isEnrolled = await LocalAuthentication.isEnrolledAsync();
+
+    if (!isEnrolled) {
+      isTemporaryBackground.current = false;
+      await LocalAuthentication.cancelAuthenticate();
+      Alert.alert(
+        'Bio Auth failed',
+        'please enrol the biometric authentication!',
+        [
+          {
+            text: 'Confirm',
+            onPress: () => {
+              isTemporaryBackground.current = false;
+              BackHandler.exitApp();
+            },
+          },
+        ],
+      );
+      return;
+    }
     const r1esult = await LocalAuthentication.authenticateAsync();
 
     if (!r1esult.success) {
-      isTemporaryBackground.current = false;
       await LocalAuthentication.cancelAuthenticate();
-      console.log('bio failed');
-      BackHandler.exitApp();
+      Alert.alert('Bio Auth failed', 'Wrong bio info!', [
+        {
+          text: 'Confirm',
+          onPress: () => {
+            isTemporaryBackground.current = false;
+            BackHandler.exitApp();
+          },
+        },
+      ]);
     }
   }
   useEffect(() => {

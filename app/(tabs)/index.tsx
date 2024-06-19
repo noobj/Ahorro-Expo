@@ -2,13 +2,20 @@ import { Image, StyleSheet } from 'react-native';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import LoginForm from '@/components/LoginForm';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { router } from 'expo-router';
+import { router, useFocusEffect } from 'expo-router';
 
-export default async function HomeScreen() {
-  const token = await AsyncStorage.getItem('accessToken');
-  if (token !== null) {
-    router.navigate('/explore');
+export default function HomeScreen() {
+  async function checkIsLoginedIn() {
+    const token = await AsyncStorage.getItem('accessToken');
+    if (token !== null) {
+      console.log('logined in');
+      router.navigate('/explore');
+    }
   }
+
+  useFocusEffect(() => {
+    checkIsLoginedIn();
+  });
 
   return (
     <ParallaxScrollView
