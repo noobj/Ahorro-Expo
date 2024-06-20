@@ -1,0 +1,584 @@
+[
+    {
+      "_id": "65145b49e6478056f368144a",
+      "sum": 10905,
+      "percentage": "0.30",
+      "name": "Food",
+      "entries": [
+        {
+          "_id": "65145b49e6478056f3681cb3",
+          "amount": 1500,
+          "date": "2022-12-17",
+          "descr": "Tainan"
+        },
+        {
+          "_id": "65145b49e6478056f3681cd8",
+          "amount": 1000,
+          "date": "2022-12-30",
+          "descr": "Ginger duck"
+        },
+        {
+          "_id": "65145b49e6478056f3681ca3",
+          "amount": 670,
+          "date": "2022-12-10",
+          "descr": "甜蜜如詩"
+        },
+        {
+          "_id": "65145b49e6478056f3681c8b",
+          "amount": 630,
+          "date": "2022-12-03",
+          "descr": "Petit déjeuner "
+        },
+        {
+          "_id": "65145b49e6478056f3681cb6",
+          "amount": 600,
+          "date": "2022-12-18",
+          "descr": "Maid cafe and coffee bean"
+        },
+        {
+          "_id": "65145b49e6478056f3681c90",
+          "amount": 571,
+          "date": "2022-12-04",
+          "descr": "鼎王"
+        },
+        {
+          "_id": "65145b49e6478056f3681cda",
+          "amount": 570,
+          "date": "2022-12-31",
+          "descr": "Petit déjeuner "
+        },
+        {
+          "_id": "65145b49e6478056f3681caf",
+          "amount": 500,
+          "date": "2022-12-16",
+          "descr": "嘉義"
+        },
+        {
+          "_id": "65145b49e6478056f3681cb8",
+          "amount": 370,
+          "date": "2022-12-18",
+          "descr": "Your mind café "
+        },
+        {
+          "_id": "65145b49e6478056f3681cae",
+          "amount": 350,
+          "date": "2022-12-15",
+          "descr": "Baba India "
+        },
+        {
+          "_id": "65145b49e6478056f3681cd6",
+          "amount": 330,
+          "date": "2022-12-29",
+          "descr": "Sushi express"
+        },
+        {
+          "_id": "65145b49e6478056f3681cc0",
+          "amount": 320,
+          "date": "2022-12-20",
+          "descr": "Dîner "
+        },
+        {
+          "_id": "65145b49e6478056f3681cb9",
+          "amount": 270,
+          "date": "2022-12-17",
+          "descr": "Maccers "
+        },
+        {
+          "_id": "65145b49e6478056f3681cb7",
+          "amount": 200,
+          "date": "2022-12-18",
+          "descr": "Dîner "
+        },
+        {
+          "_id": "65145b49e6478056f3681cbf",
+          "amount": 200,
+          "date": "2022-12-20",
+          "descr": "Chocolate "
+        },
+        {
+          "_id": "65145b49e6478056f3681cce",
+          "amount": 180,
+          "date": "2022-12-25",
+          "descr": "Citrus "
+        },
+        {
+          "_id": "65145b49e6478056f3681c8e",
+          "amount": 150,
+          "date": "2022-12-04",
+          "descr": "Sashimi"
+        },
+        {
+          "_id": "65145b49e6478056f3681cb1",
+          "amount": 150,
+          "date": "2022-12-16",
+          "descr": "嘉義"
+        },
+        {
+          "_id": "65145b49e6478056f3681cc1",
+          "amount": 150,
+          "date": "2022-12-20",
+          "descr": "Déj "
+        },
+        {
+          "_id": "65145b49e6478056f3681cc4",
+          "amount": 150,
+          "date": "2022-12-22",
+          "descr": "Tick tock"
+        },
+        {
+          "_id": "65145b49e6478056f3681cc9",
+          "amount": 150,
+          "date": "2022-12-24",
+          "descr": "鹹酥G"
+        },
+        {
+          "_id": "65145b49e6478056f3681c89",
+          "amount": 115,
+          "date": "2022-12-01",
+          "descr": "Déj "
+        },
+        {
+          "_id": "65145b49e6478056f3681caa",
+          "amount": 110,
+          "date": "2022-12-13",
+          "descr": "Dîner "
+        },
+        {
+          "_id": "65145b49e6478056f3681c98",
+          "amount": 100,
+          "date": "2022-12-06",
+          "descr": "麻油雞"
+        },
+        {
+          "_id": "65145b49e6478056f3681ca1",
+          "amount": 100,
+          "date": "2022-12-09",
+          "descr": "Déj "
+        },
+        {
+          "_id": "65145b49e6478056f3681ca4",
+          "amount": 100,
+          "date": "2022-12-10",
+          "descr": "夜市"
+        },
+        {
+          "_id": "65145b49e6478056f3681cc7",
+          "amount": 100,
+          "date": "2022-12-24",
+          "descr": "Petit déjeuner "
+        },
+        {
+          "_id": "65145b49e6478056f3681ccd",
+          "amount": 100,
+          "date": "2022-12-25",
+          "descr": "Passion food"
+        },
+        {
+          "_id": "65145b49e6478056f3681cd2",
+          "amount": 100,
+          "date": "2022-12-27",
+          "descr": "Dîner "
+        },
+        {
+          "_id": "65145b49e6478056f3681ca6",
+          "amount": 90,
+          "date": "2022-12-12",
+          "descr": "Déj "
+        },
+        {
+          "_id": "65145b49e6478056f3681cbc",
+          "amount": 90,
+          "date": "2022-12-19",
+          "descr": "Déj "
+        },
+        {
+          "_id": "65145b49e6478056f3681c99",
+          "amount": 85,
+          "date": "2022-12-06",
+          "descr": "蜜汁燒烤"
+        },
+        {
+          "_id": "65145b49e6478056f3681ca0",
+          "amount": 80,
+          "date": "2022-12-08",
+          "descr": "Déj "
+        },
+        {
+          "_id": "65145b49e6478056f3681cd3",
+          "amount": 80,
+          "date": "2022-12-27",
+          "descr": "Déj "
+        },
+        {
+          "_id": "65145b49e6478056f3681cac",
+          "amount": 79,
+          "date": "2022-12-14",
+          "descr": "全家"
+        },
+        {
+          "_id": "65145b49e6478056f3681c8a",
+          "amount": 75,
+          "date": "2022-12-01",
+          "descr": "Dîner "
+        },
+        {
+          "_id": "65145b49e6478056f3681c95",
+          "amount": 75,
+          "date": "2022-12-05",
+          "descr": "Déj "
+        },
+        {
+          "_id": "65145b49e6478056f3681c96",
+          "amount": 75,
+          "date": "2022-12-06",
+          "descr": "Déj "
+        },
+        {
+          "_id": "65145b49e6478056f3681c9a",
+          "amount": 75,
+          "date": "2022-12-07",
+          "descr": "Déj "
+        },
+        {
+          "_id": "65145b49e6478056f3681cc2",
+          "amount": 75,
+          "date": "2022-12-21",
+          "descr": "Déj "
+        },
+        {
+          "_id": "65145b49e6478056f3681cca",
+          "amount": 75,
+          "date": "2022-12-24",
+          "descr": "炎術"
+        },
+        {
+          "_id": "65145b49e6478056f3681ca9",
+          "amount": 65,
+          "date": "2022-12-13",
+          "descr": "Déj "
+        },
+        {
+          "_id": "65145b49e6478056f3681cc5",
+          "amount": 50,
+          "date": "2022-12-22",
+          "descr": "Déj "
+        }
+      ],
+      "color": "#ef0e4c"
+    },
+    {
+      "_id": "65145b49e6478056f368143c",
+      "sum": 7660,
+      "percentage": "0.21",
+      "name": "Cloth",
+      "entries": [
+        {
+          "_id": "65145b49e6478056f3681cd1",
+          "amount": 3666,
+          "date": "2022-12-26",
+          "descr": "Uniqlo"
+        },
+        {
+          "_id": "65145b49e6478056f3681cbe",
+          "amount": 2400,
+          "date": "2022-12-19",
+          "descr": "Adidas "
+        },
+        {
+          "_id": "65145b49e6478056f3681c9d",
+          "amount": 1594,
+          "date": "2022-12-07",
+          "descr": "鄉野情"
+        }
+      ],
+      "color": "#37a123"
+    },
+    {
+      "_id": "65145b49e6478056f368143a",
+      "sum": 5780,
+      "percentage": "0.16",
+      "name": "Grocery",
+      "entries": [
+        {
+          "_id": "65145b49e6478056f3681ca7",
+          "amount": 722,
+          "date": "2022-12-12",
+          "descr": "Pxmart"
+        },
+        {
+          "_id": "65145b49e6478056f3681c9f",
+          "amount": 608,
+          "date": "2022-12-08",
+          "descr": "Jason's market"
+        },
+        {
+          "_id": "65145b49e6478056f3681cd0",
+          "amount": 600,
+          "date": "2022-12-26",
+          "descr": "Pxmart"
+        },
+        {
+          "_id": "65145b49e6478056f3681c91",
+          "amount": 589,
+          "date": "2022-12-04",
+          "descr": "Carrefour "
+        },
+        {
+          "_id": "65145b49e6478056f3681cd4",
+          "amount": 560,
+          "date": "2022-12-27",
+          "descr": "RT mart"
+        },
+        {
+          "_id": "65145b49e6478056f3681ca2",
+          "amount": 516,
+          "date": "2022-12-09",
+          "descr": "Pxmart"
+        },
+        {
+          "_id": "65145b49e6478056f3681cbd",
+          "amount": 375,
+          "date": "2022-12-19",
+          "descr": "Pxmart"
+        },
+        {
+          "_id": "65145b49e6478056f3681c8c",
+          "amount": 323,
+          "date": "2022-12-04",
+          "descr": "Pxmart"
+        },
+        {
+          "_id": "65145b49e6478056f3681c9c",
+          "amount": 322,
+          "date": "2022-12-07",
+          "descr": "Carrefour "
+        },
+        {
+          "_id": "65145b49e6478056f3681c94",
+          "amount": 267,
+          "date": "2022-12-05",
+          "descr": "Pxmart"
+        },
+        {
+          "_id": "65145b49e6478056f3681c92",
+          "amount": 250,
+          "date": "2022-12-05",
+          "descr": "Sauerkraut "
+        },
+        {
+          "_id": "65145b49e6478056f3681cad",
+          "amount": 144,
+          "date": "2022-12-14",
+          "descr": "大搬家袋"
+        },
+        {
+          "_id": "65145b49e6478056f3681cab",
+          "amount": 120,
+          "date": "2022-12-14",
+          "descr": "Laundry"
+        },
+        {
+          "_id": "65145b49e6478056f3681ccf",
+          "amount": 110,
+          "date": "2022-12-26",
+          "descr": "Laundry "
+        },
+        {
+          "_id": "65145b49e6478056f3681ca5",
+          "amount": 99,
+          "date": "2022-12-11",
+          "descr": "Condom"
+        },
+        {
+          "_id": "65145b49e6478056f3681c8d",
+          "amount": 80,
+          "date": "2022-12-04",
+          "descr": "Vegs"
+        },
+        {
+          "_id": "65145b49e6478056f3681c97",
+          "amount": 80,
+          "date": "2022-12-06",
+          "descr": "菜市場"
+        },
+        {
+          "_id": "65145b49e6478056f3681c8f",
+          "amount": 15,
+          "date": "2022-12-04",
+          "descr": "Passion fruit"
+        }
+      ],
+      "color": "#475b99"
+    },
+    {
+      "_id": "65145b49e6478056f368143e",
+      "sum": 4500,
+      "percentage": "0.12",
+      "name": "Rent",
+      "entries": [
+        {
+          "_id": "65145b49e6478056f3681ca8",
+          "amount": 3500,
+          "date": "2022-12-12",
+          "descr": ""
+        },
+        {
+          "_id": "65145b49e6478056f3681ccc",
+          "amount": 1000,
+          "date": "2022-12-24",
+          "descr": "日月潭"
+        }
+      ],
+      "color": "#90d651"
+    },
+    {
+      "_id": "65145b49e6478056f3681447",
+      "sum": 3210,
+      "percentage": "0.09",
+      "name": "Training",
+      "entries": [
+        {
+          "_id": "65145b49e6478056f3681cbb",
+          "amount": 3100,
+          "date": "2022-12-19",
+          "descr": "Lingq"
+        },
+        {
+          "_id": "65145b49e6478056f3681c9b",
+          "amount": 110,
+          "date": "2022-12-07",
+          "descr": "長春"
+        }
+      ],
+      "color": "#401f28"
+    },
+    {
+      "_id": "65145b49e6478056f368143b",
+      "sum": 1180,
+      "percentage": "0.03",
+      "name": "Fun",
+      "entries": [
+        {
+          "_id": "65145b49e6478056f3681cc6",
+          "amount": 810,
+          "date": "2022-12-23",
+          "descr": "Juca bar"
+        },
+        {
+          "_id": "65145b49e6478056f3681cc3",
+          "amount": 270,
+          "date": "2022-12-21",
+          "descr": "Netflix "
+        },
+        {
+          "_id": "65145b49e6478056f3681cd9",
+          "amount": 100,
+          "date": "2022-12-30",
+          "descr": "Cigarettes "
+        }
+      ],
+      "color": "#f9a15e"
+    },
+    {
+      "_id": "65145b49e6478056f3681437",
+      "sum": 1110,
+      "percentage": "0.03",
+      "name": "Beverage",
+      "entries": [
+        {
+          "_id": "65145b49e6478056f3681ccb",
+          "amount": 650,
+          "date": "2022-12-25",
+          "descr": "巷弄咖啡"
+        },
+        {
+          "_id": "65145b49e6478056f3681c93",
+          "amount": 285,
+          "date": "2022-12-05",
+          "descr": "Portion 11 El salavodor"
+        },
+        {
+          "_id": "65145b49e6478056f3681cd5",
+          "amount": 155,
+          "date": "2022-12-29",
+          "descr": "Wakaru café "
+        },
+        {
+          "_id": "65145b49e6478056f3681c9e",
+          "amount": 20,
+          "date": "2022-12-07",
+          "descr": "Water"
+        }
+      ],
+      "color": "#7ddca4"
+    },
+    {
+      "_id": "65145b49e6478056f3681439",
+      "sum": 1059,
+      "percentage": "0.03",
+      "name": "Traffic",
+      "entries": [
+        {
+          "_id": "65145b49e6478056f3681cb4",
+          "amount": 369,
+          "date": "2022-12-17",
+          "descr": "To Taichung "
+        },
+        {
+          "_id": "65145b49e6478056f3681cc8",
+          "amount": 350,
+          "date": "2022-12-24",
+          "descr": "Scooter rent"
+        },
+        {
+          "_id": "65145b49e6478056f3681cb0",
+          "amount": 150,
+          "date": "2022-12-16",
+          "descr": "Scooter "
+        },
+        {
+          "_id": "65145b49e6478056f3681cd7",
+          "amount": 100,
+          "date": "2022-12-29",
+          "descr": "Petrol "
+        },
+        {
+          "_id": "65145b49e6478056f3681cba",
+          "amount": 90,
+          "date": "2022-12-17",
+          "descr": "Petrol "
+        }
+      ],
+      "color": "#40e099"
+    },
+    {
+      "_id": "65145b49e6478056f3681449",
+      "sum": 1000,
+      "percentage": "0.03",
+      "name": "Cash Gift",
+      "entries": [
+        {
+          "_id": "65145b49e6478056f3681cb5",
+          "amount": 1000,
+          "date": "2022-12-17",
+          "descr": "Tainan homeless "
+        }
+      ],
+      "color": "#fac3a3"
+    },
+    {
+      "_id": "65145b49e6478056f3681440",
+      "sum": 350,
+      "percentage": "0.01",
+      "name": "Mobile",
+      "entries": [
+        {
+          "_id": "65145b49e6478056f3681cb2",
+          "amount": 350,
+          "date": "2022-12-16",
+          "descr": "5g"
+        }
+      ],
+      "color": "#d8d9b6"
+    }
+  ]

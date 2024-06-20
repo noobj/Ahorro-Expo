@@ -3,11 +3,13 @@ import { Button, TextInput } from 'react-native-paper';
 import { useState } from 'react';
 import { Link, router } from 'expo-router';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import PasswordValidate from 'react-native-password-validate-checklist';
 
 export default function LoginForm() {
   const baseUrl = 'https://v2u4uuu6j5.execute-api.ap-southeast-1.amazonaws.com';
   const [account, setAccount] = useState('');
   const [password, setPassword] = useState('');
+  const [validated, setValidated] = useState(false);
   async function loginHandler() {
     const url = '/auth/login';
 
@@ -19,6 +21,7 @@ export default function LoginForm() {
       credentials: 'include',
       body: formData,
     });
+
     if (res.ok === true) {
       const accessToken = res.headers
         .get('set-cookie')
@@ -46,7 +49,31 @@ export default function LoginForm() {
         value={password}
         onChangeText={text => setPassword(text)}
       />
-      <Button mode="contained" onPress={loginHandler}>
+      <PasswordValidate
+        newPassword={password}
+        confirmPassword={password}
+        validationRules={[
+          {
+            key: 'MIN_LENGTH',
+            ruleValue: 9,
+            label: 'Should contain more than 9 characters',
+          },
+          {
+            key: 'MAX_LENGTH',
+            ruleValue: 15,
+            label: 'Should contain less than 15 characters',
+          },
+          { key: 'LOWERCASE_LETTER' },
+          { key: 'UPPERCASE_LETTER' },
+          { key: 'NUMERIC' },
+          { key: 'PASSWORDS_MATCH' },
+          { key: 'SPECIAL_CHARS' },
+        ]}
+        onPasswordValidateChange={validatedBoolean =>
+          setValidated(validatedBoolean)
+        }
+      />
+      <Button disabled={validated} mode="contained" onPress={loginHandler}>
         Login
       </Button>
     </View>

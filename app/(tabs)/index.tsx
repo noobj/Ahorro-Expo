@@ -7,9 +7,10 @@ import { router, useFocusEffect } from 'expo-router';
 export default function HomeScreen() {
   async function checkIsLoginedIn() {
     const token = await AsyncStorage.getItem('accessToken');
+    console.log(token);
     if (token !== null) {
       console.log('logined in');
-      router.navigate('/explore');
+      // router.navigate('/explore');
     }
   }
 
