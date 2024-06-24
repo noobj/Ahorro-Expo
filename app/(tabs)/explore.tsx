@@ -5,22 +5,33 @@ import { Button } from 'react-native-paper';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Category } from '@/types/Category.interface';
 import CategoryList from '@/components/Category';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { formatToCurrency } from '@/helper';
+import { formatToCurrency, fetchOrRefreshAuth } from '@/helper';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import moment from 'moment';
+import { CurrentLoginStatusContext } from '@/components/CurrentLoginStatusContext';
+import CookieManager from '@react-native-cookies/cookies';
+import { router } from 'expo-router';
 
 export default function TabTwoScreen() {
+  async function logout() {
+    setCurrentLoginStatus(false);
+    await AsyncStorage.removeItem('accessToken');
+    await CookieManager.clearAll();
+    router.navigate('/');
+  }
   const [categories, setCategories] = useState<Category[]>([]);
   const [total, setTotal] = useState(-12);
-  const baseUrl = 'https://v2u4uuu6j5.execute-api.ap-southeast-1.amazonaws.com';
   const [startDate, setStartDate] = useState(new Date('2020-06-01'));
   const [startDateOpen, setStartDateOpen] = useState(false);
   const [endDate, setEndDate] = useState(new Date('2020-06-30'));
   const [endDateOpen, setEndDateOpen] = useState(false);
+  const { currentLoginStatus, setCurrentLoginStatus } = useContext(
+    CurrentLoginStatusContext,
+  );
 
   useEffect(() => {
     async function fetchEntries() {
@@ -38,9 +49,8 @@ export default function TabTwoScreen() {
       header.set('Cookie', token || '');
       header.set('Content-Type', 'application/json');
 
-      const res = await fetch(`${baseUrl}/entries?${params.toString()}`, {
+      const res = await fetchOrRefreshAuth(`/entries?${params.toString()}`, {
         headers: {
-          Cookie: `access_token=${token}`,
           'Content-Type': 'application/json', // other headers if needed
         },
       });
@@ -51,7 +61,12 @@ export default function TabTwoScreen() {
         setTotal(total);
         setCategories(categories);
       } else {
-        if (res.status === 401) Alert.alert('Please login agin');
+        if (res.status === 401) {
+          Alert.alert('Please login again');
+          setCurrentLoginStatus(false);
+          await AsyncStorage.removeItem('accessToken');
+          router.navigate('/');
+        }
       }
     }
 
@@ -111,6 +126,7 @@ export default function TabTwoScreen() {
             onChange={onChangeEndDate}
           />
         )}
+        <Button onPress={logout}>Logout</Button>
       </View>
       {categoryLists}
     </ParallaxScrollView>

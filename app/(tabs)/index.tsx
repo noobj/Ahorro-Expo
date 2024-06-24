@@ -3,13 +3,18 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import LoginForm from '@/components/LoginForm';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { router, useFocusEffect } from 'expo-router';
+import { CurrentLoginStatusContext } from '@/components/CurrentLoginStatusContext';
+import { useContext } from 'react';
 
 export default function HomeScreen() {
+  const { currentLoginStatus, setCurrentLoginStatus } = useContext(
+    CurrentLoginStatusContext,
+  );
   async function checkIsLoginedIn() {
     const token = await AsyncStorage.getItem('accessToken');
-    console.log(token);
     if (token !== null) {
       console.log('logined in');
+      setCurrentLoginStatus(true);
       // router.navigate('/explore');
     }
   }

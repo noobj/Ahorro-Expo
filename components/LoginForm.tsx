@@ -1,15 +1,19 @@
 import { Alert, View } from 'react-native';
 import { Button, TextInput } from 'react-native-paper';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Link, router } from 'expo-router';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+// import AsyncStorage from '@react-native-async-storage/async-storage';
 import PasswordValidate from 'react-native-password-validate-checklist';
+import { CurrentLoginStatusContext } from '@/components/CurrentLoginStatusContext';
 
 export default function LoginForm() {
   const baseUrl = 'https://v2u4uuu6j5.execute-api.ap-southeast-1.amazonaws.com';
   const [account, setAccount] = useState('');
   const [password, setPassword] = useState('');
   const [validated, setValidated] = useState(false);
+  const { currentLoginStatus, setCurrentLoginStatus } = useContext(
+    CurrentLoginStatusContext,
+  );
   async function loginHandler() {
     const url = '/auth/login';
 
@@ -23,13 +27,16 @@ export default function LoginForm() {
     });
 
     if (res.ok === true) {
-      const accessToken = res.headers
-        .get('set-cookie')
-        ?.split(';')[0]
-        .split('=')[1];
+      // TODO: Maybe Store the user info instead.
 
-      if (accessToken !== undefined)
-        await AsyncStorage.setItem('accessToken', accessToken);
+      // const accessToken = res.headers
+      //   .get('set-cookie')
+      //   ?.split(';')[0]
+      //   .split('=')[1];
+
+      // if (accessToken !== undefined)
+      //   await AsyncStorage.setItem('accessToken', accessToken);
+      setCurrentLoginStatus(true);
       router.navigate('/explore');
     } else {
       Alert.alert('login failed');
