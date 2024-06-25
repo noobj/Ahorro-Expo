@@ -2,19 +2,18 @@ import { Category } from '@/types/Category.interface';
 import { EntryList } from './EntryList';
 import { Collapsible } from './Collapsible';
 
-type Props = {
-  category: Category;
-  // categoryOpened: string;
-};
-
-export default function CategoryList(props: Props) {
+export default function CategoryList({ category }: { category: Category }) {
   return (
     <>
-      <Collapsible title={props.category.name} color={props.category.color}>
+      <Collapsible
+        title={category.name}
+        percentage={category.percentage}
+        sum={category.sum}
+        color={category.color}>
         {/* <span>{props.category.name}</span>
         <span>{`${props.category.percentage}%`}</span>
         <span>{`${formatToCurrency(props.category.sum)}`}</span> */}
-        <EntryList entries={props.category.entries}></EntryList>
+        <EntryList entries={category.entries}></EntryList>
       </Collapsible>
     </>
   );

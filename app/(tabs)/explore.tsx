@@ -24,7 +24,7 @@ export default function TabTwoScreen() {
     router.navigate('/');
   }
   const [categories, setCategories] = useState<Category[]>([]);
-  const [total, setTotal] = useState(-12);
+  const [total, setTotal] = useState<number | 'Loading'>('Loading');
   const [startDate, setStartDate] = useState(new Date('2020-06-01'));
   const [startDateOpen, setStartDateOpen] = useState(false);
   const [endDate, setEndDate] = useState(new Date('2020-06-30'));
@@ -48,6 +48,7 @@ export default function TabTwoScreen() {
       const header = new Headers();
       header.set('Cookie', token || '');
       header.set('Content-Type', 'application/json');
+      setTotal('Loading');
 
       const res = await fetchOrRefreshAuth(`/entries?${params.toString()}`, {
         headers: {
@@ -126,8 +127,10 @@ export default function TabTwoScreen() {
             onChange={onChangeEndDate}
           />
         )}
-        <Button onPress={logout}>Logout</Button>
       </View>
+      <Button onPress={logout} mode="contained">
+        Logout
+      </Button>
       {categoryLists}
     </ParallaxScrollView>
   );

@@ -42,9 +42,6 @@
     "extra": {
       "router": {
         "origin": false
-      },
-      "eas": {
-        "projectId": "3d983353-a9e6-4ebf-b55b-d555fa99f511"
       }
     },
     "owner": "jingfu99"

@@ -1,4 +1,4 @@
-export const formatToCurrency = (value: number) => {
+export const formatToCurrency = (value: number | 'Loading') => {
   if (typeof value !== 'number') {
     return value;
   }
