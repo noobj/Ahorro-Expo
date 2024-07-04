@@ -18,7 +18,9 @@
     },
     "android": {
       "package": "com.yourcompany.yourappname",
-      "permissions": ["android.permission.POST_NOTIFICATIONS"],
+      "permissions": [
+        "android.permission.POST_NOTIFICATIONS"
+      ],
       "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
@@ -34,7 +36,8 @@
       "@react-native-firebase/app",
       "@react-native-firebase/messaging",
       "expo-local-authentication",
-      "expo-router"
+      "expo-router",
+      "expo-localization"
     ],
     "experiments": {
       "typedRoutes": true
@@ -42,7 +45,8 @@
     "extra": {
       "router": {
         "origin": false
-      }
+      },
+      "supportsRTL": true
     },
     "owner": "jingfu99"
   }

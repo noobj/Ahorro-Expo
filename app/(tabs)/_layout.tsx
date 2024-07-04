@@ -47,6 +47,19 @@ export default function TabLayout() {
             ),
           }}
         />
+        <Tabs.Screen
+          name="add-record"
+          options={{
+            title: 'Add Record',
+            href: currentLoginStatus ? '/add-record' : null,
+            tabBarIcon: ({ color, focused }) => (
+              <TabBarIcon
+                name={focused ? 'add' : 'add-outline'}
+                color={color}
+              />
+            ),
+          }}
+        />
       </Tabs>
     </CurrentLoginStatusContext.Provider>
   );

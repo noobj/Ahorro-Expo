@@ -32,3 +32,26 @@ export const fetchOrRefreshAuth = async (
     });
   });
 };
+
+export const fetchOrRefreshAuthFirebase = async (
+    url: string,
+    opts: RequestInit = {},
+  ) => {
+    const baseUrl = 'http://10.0.2.2:5001';
+    opts.credentials = 'include';
+
+    return await fetch(`${baseUrl}${url}`, opts).then(async res => {
+      if (res.status !== 401) return res;
+
+      return await fetch(`${baseUrl}/auth/refresh`, {
+        method: 'POST',
+        credentials: 'include',
+      }).then(async result => {
+        if (result.status === 200) {
+          return await fetch(`${baseUrl}${url}`, opts);
+        }
+
+        return result;
+      });
+    });
+  };

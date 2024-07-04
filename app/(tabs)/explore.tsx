@@ -13,14 +13,14 @@ import { formatToCurrency, fetchOrRefreshAuth } from '@/helper';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import moment from 'moment';
 import { CurrentLoginStatusContext } from '@/components/CurrentLoginStatusContext';
-import CookieManager from '@react-native-cookies/cookies';
 import { router } from 'expo-router';
+import cookieManager from '@/components/CookieManager';
 
 export default function TabTwoScreen() {
   async function logout() {
     setCurrentLoginStatus(false);
     await AsyncStorage.removeItem('accessToken');
-    await CookieManager.clearAll();
+    await cookieManager.clearAll();
     router.navigate('/');
   }
   const [categories, setCategories] = useState<Category[]>([]);
@@ -45,16 +45,9 @@ export default function TabTwoScreen() {
         'timeEnd',
         `${moment(endDate.toISOString()).format('YYYY-MM-DD')}`,
       );
-      const header = new Headers();
-      header.set('Cookie', token || '');
-      header.set('Content-Type', 'application/json');
       setTotal('Loading');
 
-      const res = await fetchOrRefreshAuth(`/entries?${params.toString()}`, {
-        headers: {
-          'Content-Type': 'application/json', // other headers if needed
-        },
-      });
+      const res = await fetchOrRefreshAuth(`/entries?${params.toString()}`, {});
       console.log(res);
 
       if (res.ok === true) {
